@@ -1,0 +1,62 @@
+config:
+  target: "https://group3.sempro0.uvm.sdu.dk"
+  # target: "http://localhost:8080"
+  tls:
+    rejectUnauthorized: false
+  phases:
+    - duration: 10
+      arrivalRate: 10
+    - duration: 10
+      arrivalRate: 10
+    - duration: 10
+      arrivalRate: 10
+    - duration: 10
+      arrivalRate: 10
+  engines:
+   socketio-v3: {}
+scenarios:
+ - name: Multiply concurrent users
+   engine: socketio-v3
+   flow:
+    - get: 
+        url: '/'
+    - emit: ['newPlayer', '1', 'artillery_virtual_user']
+
+
+
+#  - name: GET '/' scenario
+#    engine: socketio-v3
+#    flow:
+#      - get:
+#          url: "/"
+
+
+#  - name: Emit TEST String scenario
+#    engine: socketio-v3
+#    flow:
+#     - emit: [test, 'hejsa']
+#     - think: 10
+
+#  - name: Multiply concurrent users
+#    engine: socketio-v3
+#    flow:
+#      - emit: ['connection']
+#      - emit: ['newPlayer', '1', 'dulicatePlayer']
+#      - think: 50
+
+
+  # - name: onUserCall test
+  #   engine: socketio-v3
+  #   flow:
+  #     - emit: ['onUserCall', 1]
+  #     - think: 100
+
+
+  # - name: Socket.on(disconnect) scenario
+  #   engine: socketio-v3
+  #   flow:
+  #     - emit: ["connection"]
+  #       response:
+  #         channel: ""
+  #         data: "user disconnected"
+  #     - think: 50

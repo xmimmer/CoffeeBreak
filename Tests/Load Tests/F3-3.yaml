@@ -1,0 +1,17 @@
+config:
+  target: "https://group3.sempro0.uvm.sdu.dk"
+  tls:
+    rejectUnauthorized: false
+  phases:
+    - duration: 1
+      arrivalRate: 1
+  engines:
+   socketio-v3: {}
+scenarios:
+ - name: Multiply concurrent users
+   engine: socketio-v3
+   flow:
+    - get: 
+        url: '/'
+    - emit: ['newPlayer', '1', 'artillery_virtual_user']
+    - think: 600

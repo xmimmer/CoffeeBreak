@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<canvas id="canvas" width="1080" height="720"></canvas>
+<input type="text" class="col-sm-1 form-control" id="usernameField" maxlength="15" placeholder="Enter username">
+<button type="button" id="connectButton" class="btn btn-primary">Connect</button>
+<button type="button" id="disconnectButton" style="visibility: hidden" class="btn btn-danger">Disconnect</button>
+<label id="connectionLabel" style="visibility: visible;">Disconnected</label>
+<button type="button" id="callUserButton" style="visibility: hidden;" class="btn btn-primary">Call User</button>
+<button type="button" id="leaveCallButton" style="visibility: hidden;" class="btn btn-danger">Leave call</button>
+<label id="nearbyLabel" style="visibility: hidden;">No user nearby</label>
+<div id="audiostream-container"></div>
+
+<head>
+
+    <!--PeerJS-->
+    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <script defer src="socket.io/socket.io.js"></script>
+    <script defer src="scripts/app.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Popper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <link rel="stylesheet" href="CSS/styling.css">
+
+</head>
+
+<body>
+    <!--Background Image-->
+    <style id="background-placeholder">
+    </style>
+    <script>
+        $.get("HTML/background.html", function (data) {
+            $("#background-placeholder").replaceWith(data);
+        });
+    </script>
+
+</body>
+
+</html>

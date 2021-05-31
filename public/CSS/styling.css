@@ -1,0 +1,65 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    border: 5px solid #362a03;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#connectButton {
+    position: absolute;
+    left: 15%;
+    top: 50%; 
+    width: 100px;
+}
+
+#disconnectButton {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 100px;
+}
+
+#usernameField {
+    position: absolute;
+    left: 15%;
+    top: 45%;
+}
+
+#connectionLabel {
+    position: absolute;
+    color: red;
+    left: 15%;
+    top: 40%; 
+    font-style: italic;
+}
+
+#nearbyLabel {
+position: absolute;
+color: red;
+top: 80%;
+left: 50%;
+font-style: italic;
+
+}
+
+#callUserButton {
+    position: absolute;
+    top: 85%;
+    left: 45%; 
+}
+
+#leaveCallButton {
+    position: absolute;
+    top: 85%;
+    left: 55%;
+}
