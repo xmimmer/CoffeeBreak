@@ -1,6 +1,6 @@
 # CoffeeBreak
 Real-time communication platform
 
-Made by:
-Mads Møller Hansen 
+Made by: <br>
+Mads Møller Hansen <br>
 Mikkel Daugaard Høyberg
